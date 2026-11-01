@@ -33,13 +33,15 @@ export default function Footer() {
           {/* Social Links */}
           <div style={{ display: 'flex', gap: 12 }}>
             {[
-              { icon: <Mail size={16} />, href: 'mailto:[YOUR_EMAIL]', label: 'Email' },
-              { icon: <Link2 size={16} />, href: '#', label: 'LinkedIn' },
-              { icon: <GitBranch size={16} />, href: '#', label: 'GitHub' },
+              { icon: <Mail size={16} />, href: 'mailto:vigneshvasan21@gmail.com', label: 'Email' },
+              { icon: <Link2 size={16} />, href: 'https://linkedin.com/in/vignesh_vasan/', label: 'LinkedIn' },
+              { icon: <GitBranch size={16} />, href: 'https://github.com/vignesh_vasan', label: 'GitHub' },
             ].map((link) => (
               <a
                 key={link.label}
                 href={link.href}
+                target={link.label !== 'Email' ? '_blank' : undefined}
+                rel={link.label !== 'Email' ? 'noopener noreferrer' : undefined}
                 aria-label={link.label}
                 style={{
                   width: 36, height: 36, borderRadius: 8,

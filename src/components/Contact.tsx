@@ -7,9 +7,9 @@ export default function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
-  const PLACEHOLDER_EMAIL = '[YOUR_EMAIL@gmail.com]';
-  const PLACEHOLDER_LINKEDIN = 'https://linkedin.com/in/[your-linkedin]';
-  const PLACEHOLDER_GITHUB = 'https://github.com/[your-github]';
+  const PLACEHOLDER_EMAIL = 'vigneshvasan21@gmail.com';
+  const PLACEHOLDER_LINKEDIN = 'https://linkedin.com/in/vignesh_vasan/';
+  const PLACEHOLDER_GITHUB = 'https://github.com/vignesh_vasan';
   const GithubIcon = GitBranch;
 
   return (
@@ -108,9 +108,9 @@ export default function Contact() {
               className="contact-info-grid"
             >
               {[
-                { icon: <Mail size={18} />, label: 'Email', value: PLACEHOLDER_EMAIL, note: 'Replace with your email' },
-                { icon: <Link2 size={18} />, label: 'LinkedIn', value: 'linkedin.com/in/...', note: 'Replace with your LinkedIn' },
-                { icon: <GithubIcon size={18} />, label: 'GitHub', value: 'github.com/...', note: 'Replace with your GitHub' },
+                { icon: <Mail size={18} />, label: 'Email', value: PLACEHOLDER_EMAIL, note: 'Direct Email' },
+                { icon: <Link2 size={18} />, label: 'LinkedIn', value: 'linkedin.com/in/vignesh_vasan', note: 'Professional Profile' },
+                { icon: <GithubIcon size={18} />, label: 'GitHub', value: 'github.com/vignesh_vasan', note: 'Code & Projects' },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -169,7 +169,7 @@ export default function Contact() {
               </a>
               <a
                 href="/resume.pdf"
-                download="Vignesh_S_AI_Designer_Resume.pdf"
+                download="Vignesh_Vasan_AI_Designer_Resume.pdf"
                 className="btn-secondary"
                 id="resume-download-btn"
               >
@@ -178,16 +178,7 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* Notice */}
-            <p style={{
-              marginTop: 28, color: '#334155', fontSize: '0.75rem', lineHeight: 1.6,
-              borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: 24,
-            }}>
-              📌 Contact details are placeholders — add your actual email, LinkedIn, and GitHub profile links in{' '}
-              <code style={{ color: '#7c3aed', background: 'rgba(124,58,237,0.1)', padding: '1px 6px', borderRadius: 4 }}>
-                src/components/Contact.tsx
-              </code>
-            </p>
+
           </motion.div>
         </motion.div>
       </div>
