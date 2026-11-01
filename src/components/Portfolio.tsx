@@ -21,7 +21,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.97 }}
-          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           {/* Image */}
           <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '24px 24px 0 0' }}>
@@ -284,7 +284,7 @@ export default function Portfolio() {
             display: 'flex', gap: 8, flexWrap: 'wrap',
             marginBottom: 48,
           }}>
-            {['All', 'Product Advertising', 'Brand Campaign', 'Tech Branding', 'Ecommerce', 'AI Demonstration'].map((cat) => (
+            {categories.map((cat) => (
               <button
                 key={cat}
                 className={`filter-tab ${activeFilter === cat ? 'active' : ''}`}
